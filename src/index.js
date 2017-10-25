@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const reviewList = document.getElementById('review-list')
+  reviewList.style.visibility = 'hidden'
+
   var geocoder = new google.maps.Geocoder();
   var infowindow = new google.maps.InfoWindow();
   var school = {lat: 40.705439, lng: -74.014002};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 11,
+    zoom: 12,
     center: school
   });
 
