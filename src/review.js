@@ -28,13 +28,14 @@ class Review{
     })
 
 
-    // const reviewEditButton = document.createElement('BUTTON')
-    // reviewEditButton.id = this.id
-    // reviewEditButton.innerText = "Edit"
+    const reviewEditButton = document.createElement('BUTTON')
+    reviewEditButton.setAttribute("class", "edit-review-button")
+    reviewEditButton.id = this.id
+    reviewEditButton.innerText = "Edit"
 
     // const reviewMarkup = document.createElement('div')
     // reviewMarkup.appendChild(reviewHolder)
-    // reviewMarkup.appendChild(reviewEditButton)
+    reviewHolder.appendChild(reviewEditButton)
 
     return reviewHolder
 

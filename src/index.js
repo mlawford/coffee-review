@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const reviewList = document.getElementById('review-list')
   reviewList.style.visibility = 'hidden'
+  const appController = new App()
+  appController.attachEventListeners()
 
   var geocoder = new google.maps.Geocoder();
   var infowindow = new google.maps.InfoWindow();
