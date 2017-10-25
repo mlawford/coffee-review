@@ -1,3 +1,4 @@
+
 class Review{
 
 
@@ -8,14 +9,13 @@ class Review{
     this.price = data.price
     this.rating = data.rating
     this.address = data.address
-    Review.all.push(this)
 
   }
 
   renderReview(){
     const reviewHolder = document.createElement('div')
     reviewHolder.setAttribute("class","review-holder")
-    reviewHolder.innerHTML = `<h3 class="name-tag">${this.name}</h3><p>${this.drink_ordered}</p><p>${this.price}</p><p>${this.rating}</p><p>${this.address}</p>`
+    reviewHolder.innerHTML = `<h3 class="name-tag">${this.name}</h3><p>Drink Ordered: ${this.drink_ordered}</p><p>Price: ${this.price}</p><p>Rating: ${this.rating}</p><p>Address: ${this.address}</p>`
 
     const allReviewsButton = document.getElementById('hide-and-show-all-reviews')
     allReviewsButton.addEventListener('click', (e) => {
@@ -33,12 +33,21 @@ class Review{
     reviewEditButton.id = this.id
     reviewEditButton.innerText = "Edit"
 
+    const reviewEditHolder = document.createElement('div')
+    reviewEditHolder.setAttribute("id","review-edit-holder")
+
     // const reviewMarkup = document.createElement('div')
     // reviewMarkup.appendChild(reviewHolder)
     reviewHolder.appendChild(reviewEditButton)
+    reviewHolder.appendChild(reviewEditHolder)
+    Review.all.push(this)
 
     return reviewHolder
 
+  }
+
+  static findByReviewsId(id) {
+    return this.all.find(review => parseInt(review.id) === id)
   }
 }
 
