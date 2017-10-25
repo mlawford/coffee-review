@@ -85,6 +85,13 @@ class App{
         rating: document.getElementById('rating-value').value,
         address: document.getElementById('address-value').value
       }
+
+      document.getElementById('name-value').value = ""
+      document.getElementById('drink-value').value = ""
+      document.getElementById('price-value').value = ""
+      document.getElementById('rating-value').value = ""
+      document.getElementById('address-value').value = ""
+
       fetch('http://localhost:3000/api/v1/reviews',{
         headers: {
           'Accept': 'application/json',

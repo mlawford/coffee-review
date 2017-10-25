@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             return function() {
               infowindow.setContent(`
                 <h2>${review.name}</h2>
-                <div>Rating: ${review.rating}stars</div>
+                <div>Rating: ${review.rating} stars</div>
                 <div>What Did You Order?: ${review.drink_ordered}</div>
                 <div>How Much Was It?: $${review.price}</div>
                 `);
