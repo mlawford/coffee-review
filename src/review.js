@@ -35,11 +35,13 @@ class Review{
 
     const reviewEditHolder = document.createElement('div')
     reviewEditHolder.setAttribute("id","review-edit-holder")
+    // reviewEditHolder.setAttribute("class","row")
 
     // const reviewMarkup = document.createElement('div')
     // reviewMarkup.appendChild(reviewHolder)
     reviewHolder.appendChild(reviewEditButton)
     reviewHolder.appendChild(reviewEditHolder)
+
     Review.all.push(this)
 
     return reviewHolder
