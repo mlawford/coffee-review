@@ -14,7 +14,7 @@ class App{
       event.preventDefault()
       let target = event.target
 
-      if (target.className === 'edit-review-button'){
+      if (target.className === 'button2'){
         let targetId = parseInt(target.id)
         let findReview = Review.findByReviewsId(targetId)
 

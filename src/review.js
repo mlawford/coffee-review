@@ -29,7 +29,7 @@ class Review{
 
 
     const reviewEditButton = document.createElement('BUTTON')
-    reviewEditButton.setAttribute("class", "edit-review-button")
+    reviewEditButton.setAttribute("class", "button2")
     reviewEditButton.id = this.id
     reviewEditButton.innerText = "Edit"
 
